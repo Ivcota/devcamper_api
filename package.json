@@ -10,8 +10,10 @@
   "author": "Iverson Diles",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.13.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
