@@ -13,7 +13,11 @@ connectDB();
 // Route Files
 const bootcamps = require("./routes/bootcamps");
 
+// Express Init
 const app = express();
+
+// Body Parser Middleware
+app.use(express.json());
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -27,7 +31,8 @@ const PORT = process.env.PORT || 5000;
 const server = app.listen(
   PORT,
   console.log(
-    `Server is running in ${process.env.NODE_ENV} mode on port ${process.env.PORT}`.yellow.bold
+    `Server is running in ${process.env.NODE_ENV} mode on port ${process.env.PORT}`
+      .yellow.bold
   )
 );
 
